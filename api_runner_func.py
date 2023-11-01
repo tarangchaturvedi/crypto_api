@@ -40,6 +40,7 @@ def api_runner():
             # Example: Extract and process data from the normalized DataFrame
             # (Modify this part according to the JSON structure)
             crypto_data['Timestamp'] = timestamp
+            crypto_data['Timestamp'] = pd.to_datetime(crypto_data['Timestamp'])
 
             # Load the existing data from the CSV file (if it exists)
             csv_filename = 'E:\\projects\\crypto_api\\api_project.csv'
