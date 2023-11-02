@@ -1,4 +1,4 @@
-import requests
+from requests import Request, Session
 import datetime
 import pandas as pd
 import json
@@ -12,13 +12,15 @@ PARAMS = {
 }
 
 def get_crypto_data(api_url, params, api_key):
+    session = Session()  # Create a session
+
     headers = {
         'Accepts': 'application/json',
         'X-CMC_PRO_API_KEY': api_key,
     }
 
     try:
-        response = requests.get(api_url, headers=headers, params=params)
+        response = session.get(api_url, headers=headers, params=params)  # Use the session for the request
 
         if response.status_code == 200:
             data = response.json()
