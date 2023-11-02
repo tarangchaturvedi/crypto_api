@@ -3,7 +3,7 @@ import datetime
 import pandas as pd
 import json
 
-API_KEY = 'YOUR_API_KEY'  # Replace with your CoinMarketCap API key
+API_KEY = 'YOUR_API_KEY'  # Replace with your API key
 API_URL = 'https://sandbox-api.coinmarketcap.com/v1/cryptocurrency/listings/latest'
 PARAMS = {
     'start': '1',
@@ -48,8 +48,4 @@ def update_csv(data, csv_filename):
         print(f"Data updated and saved to {csv_filename}")
     else:
         print("No data to process")
-
-if __name__ == "__main__":
-    crypto_data = get_crypto_data(API_URL, PARAMS, API_KEY)
-    if crypto_data:
-        update_csv(crypto_data, 'api_project.csv')
+        
