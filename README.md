@@ -20,6 +20,8 @@ Before you begin, ensure you have met the following requirements:
 - The script will periodically update the data (defined by update_interval and no_itr in the code).
 - The updated data will be saved to the api_project.csv file.
 
+## Data Cleaning
+After fetching and updating cryptocurrency data, you may need to clean and preprocess the data according to your specific requirements. Depending on your use case, you can implement additional data cleaning steps in the code, such as removing duplicates, handling missing values, or performing any data transformations.
 ## Contributing
 Contributions are welcome! To contribute to this project, please follow these steps:
 
